@@ -8,28 +8,18 @@ entrypoint:
 
 commands:
   build:
-    cmd: javac -d bin -g -cp lib/junit-platform-console-standalone-1.9.2.jar src/**/*
-    usage: Compile java sources in the `src` directory
+    cmd: ./gradlew build
+    usage: Compile java sources
 
   hello:
-    cmd: java -cp bin Hello $*
+    cmd: ./gradlew run --args="$*"
     usage: Run the Hello program
 
   test:
-    cmd: |
-      java \
-        -javaagent:/Users/nathan.wells/.vscode/jacocoagent.jar=destfile=target/jacoco.exec,append=false \
-        -jar lib/junit-platform-console-standalone-1.9.2.jar \
-        --class-path bin \
-        --scan-class-path
+    cmd: ./gradlew test
     usage: Run HelloTest
 
-  coverage-report:
+  coverage:
     cmd: |
-      java \
-        -jar lib/jacococli.jar \
-        report \
-        target/jacoco.exec \
-        --classfiles bin \
-        --sourcefiles src \
-        --html target/coverage-report
+      ./gradlew test
+      open app/build/reports/jacoco/test/html/index.html

@@ -1,13 +1,10 @@
+package com.nwwells.java_hello;
+
 public class Hello {
     private static final String ENDING = "!";
     private static final String GREETING = "Hallo, ";
     private static final String WORD_DELIMITERS = " ";
     private static final String DEFAULT_TARGET = "Welt";
-
-    public static void main(final String[] args) throws Exception {
-        final Hello hello = new Hello(args);
-        System.out.println(hello);
-    }
 
     private final String greeting;
 

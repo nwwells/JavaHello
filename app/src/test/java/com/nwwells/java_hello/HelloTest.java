@@ -1,9 +1,11 @@
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.fail;
+package com.nwwells.java_hello;
 
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import org.junit.jupiter.api.Test;
 
 public class HelloTest {
 
@@ -24,9 +26,9 @@ public class HelloTest {
             clone = null;
             fail("clone should never fail");
         }
-        assertFalse("Clone and source should not be identical", clone == source);
-        assertEquals("Clone and source should be equal", clone, source);
-        assertEquals("Clone and source greeting should be equal", clone.toString(), source.toString());
+        assertFalse(clone == source, "Clone and source should not be identical");
+        assertEquals(clone, source, "Clone and source should be equal");
+        assertEquals(clone.toString(), source.toString(), "Clone and source greeting should be equal");
     }
 
     @Test

@@ -4,11 +4,5 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar"
     ],
-    "java.test.defaultConfig": "jacoco",
-    "java.test.config": [
-        {
-            "name": "jacoco",
-            "vmargs": ["-javaagent:/Users/nathan.wells/.vscode/jacocoagent.jar=destfile=target/jacoco.exec,append=false"]
-        }
-    ]
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
