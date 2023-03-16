@@ -1,18 +1,15 @@
-## Getting Started
+# JavaHello
+Hey, this is just a simple way for me to get back up to speed on Java dev tools. The point is not the code, it's the development environment.
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Current dependencies:
 
-## Folder Structure
+* [ahoy-cli](https://ahoy-cli.readthedocs.io/en/latest/)
+* [zsh](https://www.zsh.org/)
 
-The workspace contains two folders by default, where:
+Check out `ahoy help` once you have the dependencies to run stuff from the CLI.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Most of this is just getting Java to work in VS Code, which may be a fools errand? Issues so far
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. Coverage is [painful compared to IDEs](https://github.com/microsoft/vscode-java-test/issues/387), though that may [be fixed eventually](https://github.com/microsoft/vscode/issues/123713).
+2. Debugging isn't as powerful as I remember in IDES like IntelliJ
+3. Still need to do dep mgmt... probably going to use Gradle since I have PTSD from former days with Maven.
